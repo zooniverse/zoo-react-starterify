@@ -11,19 +11,20 @@ import rimraf from 'rimraf';
 import notify from 'gulp-notify';
 import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
-import postcss from 'gulp-postcss';
-import nested from 'postcss-nested';
-import vars from 'postcss-simple-vars';
-import extend from 'postcss-simple-extend';
-import cssnano from 'cssnano';
+import stylus from 'gulp-stylus';
+// import postcss from 'gulp-postcss';
+// import nested from 'postcss-nested';
+// import vars from 'postcss-simple-vars';
+// import extend from 'postcss-simple-extend';
+// import cssnano from 'cssnano';
 import htmlReplace from 'gulp-html-replace';
-import image from 'gulp-image';
+import imagemin from 'gulp-imagemin';
 import runSequence from 'run-sequence';
 
 const paths = {
   bundle: 'app.js',
   srcJsx: 'src/Index.js',
-  srcCss: 'src/**/*.css',
+  srcCss: 'src/**/*.styl',
   srcImg: 'src/images/**',
   dist: 'dist',
   distJs: 'dist/js',
@@ -73,11 +74,8 @@ gulp.task('browserify', () => {
 
 gulp.task('styles', () => {
   gulp.src(paths.srcCss)
-  .pipe(sourcemaps.init())
-  .pipe(postcss([vars, extend, nested, autoprefixer, cssnano]))
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(paths.dist))
-  .pipe(reload({stream: true}));
+    .pipe(stylus())
+    .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('htmlReplace', () => {
@@ -88,7 +86,7 @@ gulp.task('htmlReplace', () => {
 
 gulp.task('images', () => {
   gulp.src(paths.srcImg)
-  .pipe(image())
+  .pipe(imagemin())
   .pipe(gulp.dest(paths.distImg));
 });
 
