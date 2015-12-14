@@ -12,12 +12,12 @@ export default React.createClass({
 
     return (
       <div>
-        <header>
-          <h1>React Starterify {version}</h1>
-          <Link to="/about">About</Link>
-          <Link to="/poweredby">Powered by</Link>
+        <header className="site-header">
+          <h1 className="title">React Starterify {version}</h1>
+          <Link to="/about" className="link">About</Link>
+          <Link to="/poweredby" className="link">Powered by</Link>
         </header>
-        <section>
+        <section className="content-section">
           {this.props.children || 'Welcome to React Starterify'}
         </section>
       </div>
