@@ -12,14 +12,10 @@ import notify from 'gulp-notify';
 import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
 import stylus from 'gulp-stylus';
-// import postcss from 'gulp-postcss';
-// import nested from 'postcss-nested';
-// import vars from 'postcss-simple-vars';
-// import extend from 'postcss-simple-extend';
-// import cssnano from 'cssnano';
 import htmlReplace from 'gulp-html-replace';
 import imagemin from 'gulp-imagemin';
 import runSequence from 'run-sequence';
+import nib from 'nib';
 
 const paths = {
   bundle: 'app.js',
@@ -74,7 +70,10 @@ gulp.task('browserify', () => {
 
 gulp.task('styles', () => {
   gulp.src(paths.srcCss)
-    .pipe(stylus())
+    .pipe(stylus({
+      use: nib(),
+      import: ['nib']
+    }))
     .pipe(gulp.dest(paths.dist));
 });
 
