@@ -26,7 +26,7 @@
     "test": "mocha --reporter nyan --compilers js:babel/register --recursive"
   },
   "author": "Maurizio Mangione",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Granze/react-starterify/issues"
   },
