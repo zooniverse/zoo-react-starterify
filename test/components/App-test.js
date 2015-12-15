@@ -17,7 +17,7 @@ describe('App', () => {
     let version = packageJSON.version;
     let h1 = app.props.children[0].props.children;
 
-    expect(h1).to.contain(<h1>React Starterify {version}</h1>);
+    expect(h1).to.include(<h1 className="title">React Starterify {version}</h1>);
   });
 
   it('should return something', () => {
