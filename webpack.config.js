@@ -35,6 +35,7 @@ module.exports = {
     loaders: [
       { test: /\.json?$/, loader: 'json' },
       { test: /.jsx?$/, exclude: /(node_modules|server.js)/, loader: "babel", query: { presets:['react','es2015'] } },
+      { test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/, loader: 'file-loader'},
       { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
     ]
   },
