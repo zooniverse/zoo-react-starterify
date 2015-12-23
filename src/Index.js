@@ -14,5 +14,5 @@ ReactDOM.render(
       <Route path="/poweredby" component={PoweredBy}/>
     </Route>
   </Router>
-  , document.getElementById('content')
+  , document.getElementById('root')
 );
