@@ -9,7 +9,7 @@ module.exports = {
     path.join(__dirname, 'src/index.js')
     ],
   output: {
-    path: path.join(__dirname, '/public/'),
+    path: path.join(__dirname, '/dist/'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -31,12 +31,14 @@ module.exports = {
     modulesDirectories: ['.', 'node_modules']
   },
   module: {
+    preLoaders: [
+      { test: /(\.js$|\.jsx$)/, loader: 'eslint-loader', exclude: /node_modules/ }
+    ],
     loaders: [
       { test: /\.json?$/, loader: 'json' },
       { test: /.jsx?$/, exclude: /(node_modules|server.js)/, loader: 'babel', query: { presets:['react','es2015'] } },
-      { test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/, loader: 'file-loader'},
-      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
-      {test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}
+      { test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/, loader: 'file-loader' },
+      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
     ]
   }
 };
