@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'eval-source-map',
   entry: [
-    "webpack-hot-middleware/client?reload=true",
+    'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'src/index.js')
     ],
   output: {
@@ -34,9 +34,10 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.json?$/, loader: 'json' },
-      { test: /.jsx?$/, exclude: /(node_modules|server.js)/, loader: "babel", query: { presets:['react','es2015'] } },
+      { test: /.jsx?$/, exclude: /(node_modules|server.js)/, loader: 'babel', query: { presets:['react','es2015'] } },
       { test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/, loader: 'file-loader'},
-      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
+      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
+      {test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}
     ]
   },
 };
