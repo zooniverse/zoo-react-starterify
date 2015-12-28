@@ -1,5 +1,4 @@
 var path = require('path');
-var buildPath = path.resolve(__dirname, 'public', 'build');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -39,5 +38,5 @@ module.exports = {
       { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
       {test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}
     ]
-  },
+  }
 };
