@@ -1,16 +1,16 @@
 {
   "name": "react-starterify",
   "version": "2.0.0",
-  "description": "React JS application skeleton using Browserify and other awesome tools",
+  "description": "React JS application skeleton using Wepback and other awesome tools",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Granze/react-starterify"
+    "url": "https://github.com/zooniverse/zoo-react-starterify"
   },
   "keywords": [
     "wepback",
     "react",
-    "browserify",
+    "wepback",
     "seed",
     "boilerplate",
     "kickstarter",
@@ -22,14 +22,14 @@
   ],
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --reporter nyan --compilers js:babel/register --recursive"
+    "test": ""
   },
   "author": "Maurizio Mangione",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Granze/react-starterify/issues"
+    "url": "https://github.com/zooniverse/zoo-react-starterify"
   },
-  "homepage": "https://github.com/Granze/react-starterify",
+  "homepage": "https://github.com/zooniverse/zoo-react-starterify",
   "dependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
@@ -46,12 +46,14 @@
     "css-loader": "^0.23.1",
     "eslint-plugin-react": "^3.3.2",
     "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^1.7.0",
     "json-loader": "^0.5.4",
     "mocha": "^2.3.0",
     "nib": "^1.1.0",
     "rimraf": "^2.4.3",
+    "stats-webpack-plugin": "^0.2.2",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.2",
     "webpack": "^1.12.9",
