@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var nib = require('nib');
 
 module.exports = {
 
@@ -39,7 +40,6 @@ module.exports = {
   },
 
   module: {
-
     preLoaders: [
       {
         test: /(\.js$|\.jsx$)/,
@@ -47,7 +47,6 @@ module.exports = {
         loader: 'eslint-loader',
       },
     ],
-
     loaders: [
       {
         test: /\.json?$/,
@@ -70,7 +69,10 @@ module.exports = {
         loader: 'style-loader!css-loader!stylus-loader',
       },
     ],
+  },
 
+  stylus: {
+    use: [nib()],
   },
 
 };

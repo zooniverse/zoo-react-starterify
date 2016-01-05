@@ -5,6 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StatsPlugin = require('stats-webpack-plugin');
+var nib = require('nib');
 
 module.exports = {
 
@@ -46,7 +47,6 @@ module.exports = {
   },
 
   module: {
-
     loaders: [
       {
         test: /\.jsx?$/,
@@ -70,7 +70,10 @@ module.exports = {
         loader: 'file-loader',
       },
     ],
+  },
 
+  stylus: {
+    use: [nib()],
   },
 
 };
