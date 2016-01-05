@@ -49,11 +49,11 @@ module.exports = {
     ],
     loaders: [
       {
-        test: /\.json?$/,
+        test: /\.json$/,
         loader: 'json',
       },
       {
-        test: /.jsx?$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules)/,
         loader: 'babel',
       },
