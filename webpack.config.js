@@ -1,9 +1,9 @@
 'use strict';
 
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var nib = require('nib');
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import nib from 'nib';
 
 module.exports = {
 
@@ -42,7 +42,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /(\.js$|\.jsx$)/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
       },
@@ -54,11 +54,8 @@ module.exports = {
       },
       {
         test: /.jsx?$/,
-        exclude: /(node_modules|server.js)/,
+        exclude: /(node_modules)/,
         loader: 'babel',
-        query: {
-          presets: ['react', 'es2015'],
-        },
       },
       {
         test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/,

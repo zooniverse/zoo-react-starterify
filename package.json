@@ -21,7 +21,7 @@
     "chai"
   ],
   "scripts": {
-    "start": "node server.js",
+    "start": "babel-node server.js",
     "test": ""
   },
   "author": "Maurizio Mangione",
@@ -38,6 +38,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.0.0",
+    "babel": "^6.3.26",
+    "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
     "babel-eslint": "^4.1.0",
     "babel-loader": "^6.2.0",
