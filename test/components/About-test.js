@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import About from '../../src/components/About';
 
 describe('About', () => {
-  const {TestUtils} = React.addons;
+  const { TestUtils } = React.addons;
   const shallowRenderer = TestUtils.createRenderer();
   shallowRenderer.render(<About />);
   const about = shallowRenderer.getRenderOutput();
@@ -15,5 +15,4 @@ describe('About', () => {
   it('should have an h2 tag containing the text "About"', () => {
     expect(about.props.children).to.contain(<h2>About</h2>);
   });
-
 });

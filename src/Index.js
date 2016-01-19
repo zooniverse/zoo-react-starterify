@@ -5,7 +5,7 @@ import App from './components/App';
 import PoweredBy from './components/Powered-by';
 import About from './components/About';
 
-import Styles from './styles/main.styl'
+import Styles from './styles/main.styl';
 
 window.React = React;
 

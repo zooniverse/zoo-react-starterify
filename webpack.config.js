@@ -1,5 +1,3 @@
-'use strict';
-
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -42,13 +40,13 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
-    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.jsx?$/,
+    //     exclude: /node_modules/,
+    //     loader: 'eslint-loader',
+    //   },
+    // ],
     loaders: [
       {
         test: /\.json$/,
