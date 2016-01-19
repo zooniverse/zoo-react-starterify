@@ -25,6 +25,7 @@ module.exports = {
       template: 'src/index.tpl.html',
       inject: 'body',
       filename: 'index.html',
+      gtm: '',
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),

@@ -22,7 +22,8 @@
   ],
   "scripts": {
     "start": "babel-node server.js",
-    "test": ""
+    "test": "",
+    "build": "webpack --config webpack.production.config.js -p"
   },
   "author": "Zooniverse",
   "license": "Apache-2.0",
