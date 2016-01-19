@@ -23,6 +23,7 @@
   "scripts": {
     "start": "babel-node server.js",
     "test": "",
+    "eslint": "eslint .",
     "build": "webpack --config webpack.production.config.js -p"
   },
   "author": "Zooniverse",
@@ -51,9 +52,10 @@
     "clean-webpack-plugin": "^0.1.6",
     "css-loader": "^0.23.1",
     "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
     "eslint-loader": "^1.1.1",
-    "eslint-plugin-react": "^3.3.2",
     "eventsource-polyfill": "^0.9.6",
+    "eslint-plugin-react": "^3.15.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
