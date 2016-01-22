@@ -71,6 +71,5 @@ module.exports = {
 
   stylus: {
     use: [nib()],
-  },
-
+  }
 };
