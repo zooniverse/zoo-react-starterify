@@ -62,11 +62,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css'],
+        loaders: ExtractTextPlugin.extract('style-loader', 'css-loader'),
       },
       {
         test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader',
+        loader: ExtractTextPlugin.extract('style-loader', '!css-loader!stylus-loader'),
       },
       {
         test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/,
