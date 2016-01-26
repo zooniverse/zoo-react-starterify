@@ -6,14 +6,14 @@ import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from './webpack.config.js';
 
-var isProduction = process.env.NODE_ENV === 'production';
-var port = isProduction ? process.env.PORT : 3000;
-var app = express();
-var indexHtml = path.join(__dirname, 'dist/index.html');
+const isProduction = process.env.NODE_ENV === 'production';
+const port = isProduction ? process.env.PORT : 3000;
+const app = express();
+const indexHtml = path.join(__dirname, 'dist/index.html');
 
 if (!isProduction) {
-  var compiler = webpack(config);
-  var middleware = webpackMiddleware(compiler, {
+  const compiler = webpack(config);
+  const middleware = webpackMiddleware(compiler, {
     publicPath: config.output.publicPath,
     contentBase: 'src',
     stats: {
