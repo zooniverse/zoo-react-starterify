@@ -6,6 +6,8 @@ import App from './components/App';
 import PoweredBy from './components/Powered-by';
 import About from './components/About';
 
+import { oauth } from 'panoptes-client';
+import { appId } from './constants/config'
 import { createStore } from 'redux';
 import { user } from './reducers';
 let store = createStore(user);
@@ -16,15 +18,17 @@ let store = createStore(user);
 import Styles from './styles/main.styl';
 
 window.React = React;
-
-ReactDOM.render(
-  <Provider store={user}>
-    <Router>
-      <Route path="/" component={App}>
-        <Route path="/about" component={About}/>
-        <Route path="/poweredby" component={PoweredBy}/>
-      </Route>
-    </Router>
-  </Provider>
-  , document.getElementById('root')
-);
+  oauth.init(appId)
+    .then(function () {
+      ReactDOM.render(
+        <Provider store={user}>
+          <Router>
+            <Route path="/" component={App}>
+              <Route path="/about" component={About}/>
+              <Route path="/poweredby" component={PoweredBy}/>
+            </Route>
+          </Router>
+        </Provider>
+        , document.getElementById('root')
+      );
+  });
