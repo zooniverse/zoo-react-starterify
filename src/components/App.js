@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import packageJSON from '../../package.json';
 
+import HeaderAuth from './HeaderAuth';
 
 export default class App extends React.Component {
   returnSomething(something) {
@@ -17,6 +18,7 @@ export default class App extends React.Component {
           <h1 className="title">React Starterify {version}</h1>
           <Link to="/about" className="link">About</Link>
           <Link to="/poweredby" className="link">Powered by</Link>
+          <HeaderAuth />
         </header>
         <section className="content-section">
           {this.props.children || 'Welcome to React Starterify'}
