@@ -36,7 +36,11 @@
     "history": "^1.13.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-router": "1.0.0-rc3"
+    "react-redux": "^4.4.5",
+    "react-router": "1.0.0-rc3",
+    "redux": "^3.5.2",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.0",
