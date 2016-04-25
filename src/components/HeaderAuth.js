@@ -5,7 +5,7 @@ import { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { checkLoginUser, setLoginUser, loginToPanoptes, logoutFromPanoptes } from '../actions/user';
 
-import LoginButton from './LoginButton.jsx';
+import LoginButton from './LoginButton';
 // import LoggedInUser from './LoggedInUser.jsx';
 
 class HeaderAuth extends Component {
@@ -31,7 +31,7 @@ class HeaderAuth extends Component {
   }
 
   render() {
-    return (this.props.user)
+    return
       // ? <LoggedInUser user={this.props.user} logout={this.logout} />
       <LoginButton login={this.login} />;
   }

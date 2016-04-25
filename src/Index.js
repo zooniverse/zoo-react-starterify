@@ -7,14 +7,13 @@ import PoweredBy from './components/Powered-by';
 import About from './components/About';
 
 import { oauth } from 'panoptes-client';
-import { appId } from './constants/config'
+import { appId } from './constants/config';
 import { createStore } from 'redux';
 import { user } from './reducers';
 let store = createStore(user);
 
 // Todo: let's find a better way to include Styles,
 // currently Styles looks like an unused var to eslint
-/* eslint "no-unused-vars": 1 */
 import Styles from './styles/main.styl';
 
 window.React = React;
