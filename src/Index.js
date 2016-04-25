@@ -8,9 +8,9 @@ import About from './components/About';
 
 import { oauth } from 'panoptes-client';
 import { appId } from './constants/config';
-import { createStore } from 'redux';
-import { user } from './reducers';
-const store = createStore(user);
+
+import configureStore from './store';
+const store = configureStore();
 
 // Todo: let's find a better way to include Styles,
 // currently Styles looks like an unused var to eslint
@@ -21,7 +21,7 @@ window.React = React;
 oauth.init(appId)
   .then(function () {
     ReactDOM.render(
-      <Provider store={user}>
+      <Provider store={store}>
         <Router>
           <Route path="/" component={App}>
             <Route path="/about" component={About}/>
