@@ -7,7 +7,7 @@ import PoweredBy from './components/Powered-by';
 import About from './components/About';
 
 import { oauth } from 'panoptes-client';
-import { appId } from './constants/config';
+import { config } from './constants/config';
 
 import configureStore from './store';
 const store = configureStore();
@@ -18,7 +18,7 @@ import Styles from './styles/main.styl';
 
 window.React = React;
 
-oauth.init(appId)
+oauth.init(config.panoptesAppId)
   .then(function () {
     ReactDOM.render(
       <Provider store={store}>
