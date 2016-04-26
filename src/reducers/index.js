@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 
 import * as login from './login';
-import * as user from './user';
 
-const reducers = Object.assign({}, login, user);
+const reducers = Object.assign({}, login);
 export default combineReducers(reducers);

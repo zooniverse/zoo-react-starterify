@@ -1,3 +1,3 @@
 export const config = {
-  panoptesAppId: '2abed6ac014d4a8416a1f578de922600451a10c759dfeab6c9f0edbeb91c8f88',
+  panoptesAppId: '24ad5676d5d25c6aa850dc5d5f63ec8c03dbc7ae113b6442b8571fce6c5b974c',
 };
