@@ -25,7 +25,7 @@ export function setLoginUser(user) {
 
 export function loginToPanoptes() {  //Returns a login page URL for the user to navigate to.
   return (dispatch) => {
-    return oauth.signIn(window.location.host)
+    return oauth.signIn(window.location.href.split('#')[0])
   }
 }
 
