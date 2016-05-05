@@ -1,5 +1,7 @@
 import { browserHistory } from 'react-router';
-import { auth, apiClient, oauth } from 'panoptes-client';
+import auth from 'panoptes-client/lib/auth';
+import apiClient from 'panoptes-client/lib/api-client';
+import oauth from 'panoptes-client/lib/oauth';
 import * as types from '../constants/actionTypes';
 import config from '../constants/config';
 

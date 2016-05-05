@@ -6,7 +6,7 @@ import App from './components/App';
 import PoweredBy from './components/Powered-by';
 import About from './components/About';
 
-import { oauth } from 'panoptes-client';
+import oauth from 'panoptes-client/lib/oauth';
 import { config } from './constants/config';
 
 import configureStore from './store';
