@@ -3,7 +3,7 @@
 # Zooniverse React Starterify
 
 A minimal React JS application starter kit, based on [React Starterify](https://github.com/Granze/react-starterify).
-
+If you’re looking for a Redux starter kit, check [this out](https://github.com/zooniverse/zoo-reduxify)
 ## Usage
 
 __Install the dependencies:__
