@@ -40,13 +40,13 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
-    ],
+//    preLoaders: [
+//      {
+//        test: /\.jsx?$/,
+//        exclude: /node_modules/,
+//        loader: 'eslint-loader',
+//      },
+//    ],
     loaders: [
       {
         test: /\.json$/,
@@ -56,6 +56,10 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         loader: 'babel',
+      },
+      {
+        test: /\.ico$/,
+        loader: 'file?name=[name].[ext]',
       },
       {
         test: /\.(jpg|png|gif|otf|eot|svg|ttf|woff\d?)$/,

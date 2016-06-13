@@ -1,6 +1,6 @@
 {
   "name": "react-starterify",
-  "version": "2.0.0",
+  "version": "0.0.1",
   "description": "React JS application skeleton using Wepback and other awesome tools",
   "main": "app.js",
   "repository": {
@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/zooniverse/zoo-react-starterify",
   "dependencies": {
+    "firebase": "^3.0.4",
     "history": "^1.13.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
